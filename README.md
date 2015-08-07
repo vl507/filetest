@@ -39,7 +39,11 @@ java -jar TestUtility.jar "pathToConfigFile"
 ## Testing
 For start test service launch com.ts.endpoint.WSPublisher in ws folder
 For using test service change host in properties file and replace string
+```
 SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseImpl(), new HTTPRequestCreatorImpl());
+```
 with
+```
 SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseTestImpl(), new HTTPRequestCreatorTestImpl());
+```
 in com.ts.App class in TextUtility folder.
