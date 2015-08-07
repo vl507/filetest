@@ -28,11 +28,11 @@ Tests check db connection, existence of cvs files and ip addresses which should 
 
 ## Main config file
 
-[conf/config.ini](conf/config.ini)
+[examples/config.ini](examples/config.ini)
 
 ## Input IP list file
 
-[conf/ip_list.conf](conf/ip_list.conf)
+[examples/ip_list.conf](examples/ip_list.conf)
 
 ## Convertion algorithms
 
