@@ -19,7 +19,6 @@ mvn clean package
 ```
 
 ## Run program
-Example
 ```
 java -jar TestUtility.jar "pathToConfigFile"
 ```
