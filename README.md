@@ -32,7 +32,7 @@ java -jar TestUtility.jar "pathToConfigFile"
 [examples/testc.csv](examples/testc.csv)
 
 ## Testing
-	For start test service launch com.ts.endpoint.WSPublisher in ws folder.
+For start test service launch com.ts.endpoint.WSPublisher in ws folder.
 For using test service change host in properties file and replace string
 ```java
 SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseImpl(), new HTTPRequestCreatorImpl());
