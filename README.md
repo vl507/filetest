@@ -1,39 +1,45 @@
-# AD Downloader
+# Test Utility for UAAS
 
-This program downloads data from Teoco Netrac AutoDiscovery csv files to SURMS Database.
+This program tests UAAS web service.
 
 
 ## Requirements
 
-AD Downloader requires the following software:
+Test Utility requires the following software:
 
-- Ubuntu/Debian/CentOS/RHEL
-- Python 3.4.2 or higher
-- python cx_Oracle module 5.1.3 (maybe others also works)
+- Linux/Unix/Windows
+- Java 7 or higher
+- Maven 3.2.1 or higher
 
+
+## Assemble program
+In the command line
+```
+mvn clean package
+```
 
 ## Run program
-
+Example
 ```
-./run_program.sh
-```
-
-## Run tests
-
-```
-./run_tests.sh
+java -jar TestUtility.jar "pathToConfigFile"
 ```
 
-Tests check db connection, existence of cvs files and ip addresses which should be present in Import_NE_*.csv file
+## Config file
 
-## Main config file
+[examples/properties.config](examples/properties.config)
 
-[examples/config.ini](examples/config.ini)
+## Input file example
 
-## Input IP list file
-
-[examples/ip_list.conf](examples/ip_list.conf)
+[examples/testc.csv](examples/testc.csv)
 
 ## Convertion algorithms
 
 [docs](docs)
+
+## Testing
+For start test service launch com.ts.endpoint.WSPublisher in ws folder
+For using test service change host in properties file and replace string
+SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseImpl(), new HTTPRequestCreatorImpl());
+with
+SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseTestImpl(), new HTTPRequestCreatorTestImpl());
+in com.ts.App class in TextUtility folder.
