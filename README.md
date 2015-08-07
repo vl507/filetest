@@ -46,4 +46,4 @@ with
 ```
 SOAPManagerStat smi = new HTTPManagerStatImpl(PropConfig.host, new HTTPParseResponseTestImpl(), new HTTPRequestCreatorTestImpl());
 ```
-in com.ts.App class in TextUtility folder.
+in com.ts.App class in TestUtility folder.
